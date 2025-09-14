@@ -1,7 +1,9 @@
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
+
 import { app } from '../../../../api/index';
+
 import { createPolicyPrismaTest } from '../../../utils/test/createPolicyPrisma';
 
 describe('Get Policy (e2e)', () => {

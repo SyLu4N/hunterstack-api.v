@@ -5,7 +5,7 @@ import fastifyMultipart from '@fastify/multipart';
 import fastifyRateLimit from '@fastify/rate-limit';
 import fastifySwagger from '@fastify/swagger';
 import fastifySwaggerUi from '@fastify/swagger-ui';
-import fastify, { FastifyReply, FastifyRequest } from 'fastify';
+import fastify from 'fastify';
 import {
   validatorCompiler,
   jsonSchemaTransform,
@@ -53,37 +53,6 @@ app.register(fastifyCors, {
     callback(null, corsOptions);
   },
 ); */
-
-app.get('/', async (req, reply) => {
-  return reply.status(200).type('text/html').send(html);
-});
-
-const html = `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Hunterstack.io API</title>
-    <meta
-      name="description"
-      content="Hunterstack-api"
-    />
-  </head>
-
-  <body>
-    <h1>Vercel + Fastify Hunterstack.io API</h1>
-    
-    <p>
-      RODANDO...
-    </p>
-  </body>
-</html>
-`;
 
 app.register(fastifyCookie);
 app.register(fastifyMultipart);

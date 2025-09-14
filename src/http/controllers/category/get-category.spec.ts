@@ -1,7 +1,9 @@
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
+
 import { app } from '../../../../api/index';
+
 import { createCategoryPrismaTest } from '../../../utils/test/createCategoryPrisma';
 
 describe('Get Category (e2e)', () => {
