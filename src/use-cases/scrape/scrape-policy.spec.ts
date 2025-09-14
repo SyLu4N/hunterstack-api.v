@@ -2,7 +2,7 @@ import { describe, it, beforeEach, expect, vi } from 'vitest';
 
 import { ScrapePolicyUseCase } from './scrape-policy';
 
-vi.mock('@/lib/puppeteer', () => ({
+vi.mock('../../lib/puppeteer', () => ({
   createBrowser: vi.fn(async () => ({
     close: vi.fn(),
   })),

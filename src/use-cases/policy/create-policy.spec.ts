@@ -1,7 +1,7 @@
-import { InMemoryCategoriesRepository } from '@/repositories/in-memory/in-memory-categories-repository';
-import { InMemoryPoliciesRepository } from '@/repositories/in-memory/in-memory-policies-repository';
 import { describe, it, expect, beforeEach } from 'vitest';
 
+import { InMemoryCategoriesRepository } from '../../repositories/in-memory/in-memory-categories-repository';
+import { InMemoryPoliciesRepository } from '../../repositories/in-memory/in-memory-policies-repository';
 import { CreatePolicyUseCase } from './create-policy';
 
 let policyRepository: InMemoryPoliciesRepository;

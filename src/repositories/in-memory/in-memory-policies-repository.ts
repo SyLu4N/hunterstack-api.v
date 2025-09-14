@@ -1,8 +1,8 @@
-import { PolicyWithAdditionalInfo } from '@/@types/@policy-with-additional-info';
-import { FetchPoliciesQuery } from '@/@types/fetch-policies-query';
-import { generateSlug } from '@/utils/generate-slug';
 import { Prisma } from '@prisma/client';
 
+import { PolicyWithAdditionalInfo } from '../../@types/@policy-with-additional-info';
+import { FetchPoliciesQuery } from '../../@types/fetch-policies-query';
+import { generateSlug } from '../../utils/generate-slug';
 import { InterfacePolicyRepository } from '../@interface/interface-policy-repository';
 
 export class InMemoryPoliciesRepository implements InterfacePolicyRepository {

@@ -1,7 +1,7 @@
-import { FetchCategoriesQuery } from '@/@types/fetch-categories-query';
-import { prisma } from '@/lib/prisma';
 import { Prisma } from '@prisma/client';
 
+import { FetchCategoriesQuery } from '../../@types/fetch-categories-query';
+import { prisma } from '../../lib/prisma';
 import { InterfaceCategoryRepository } from '../@interface/interface-category-repository';
 
 const select: Prisma.CategorySelect = {

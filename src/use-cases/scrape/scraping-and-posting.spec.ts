@@ -1,7 +1,7 @@
-import { InMemoryCategoriesRepository } from '@/repositories/in-memory/in-memory-categories-repository';
-import { InMemoryPoliciesRepository } from '@/repositories/in-memory/in-memory-policies-repository';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
+import { InMemoryCategoriesRepository } from '../../repositories/in-memory/in-memory-categories-repository';
+import { InMemoryPoliciesRepository } from '../../repositories/in-memory/in-memory-policies-repository';
 import { AnalizePolicyUseCase } from '../llm/analyzePolicy';
 import { CreatePolicyUseCase } from '../policy/create-policy';
 import { GetBySlugPolicyUseCase } from '../policy/get-by-slug-policy';

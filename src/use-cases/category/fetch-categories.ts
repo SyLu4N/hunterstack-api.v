@@ -1,7 +1,6 @@
-import { CategoryWithAdditionalInfo } from '@/@types/@category-with-additional-info';
-import { FetchCategoriesQuery } from '@/@types/fetch-categories-query';
-import { InterfaceCategoryRepository } from '@/repositories/@interface/interface-category-repository';
-
+import { CategoryWithAdditionalInfo } from '../../@types/@category-with-additional-info';
+import { FetchCategoriesQuery } from '../../@types/fetch-categories-query';
+import { InterfaceCategoryRepository } from '../../repositories/@interface/interface-category-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 
 interface FetchCategoriesUseCaseRequest {

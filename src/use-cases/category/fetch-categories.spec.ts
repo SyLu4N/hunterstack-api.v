@@ -1,6 +1,6 @@
-import { InMemoryCategoriesRepository } from '@/repositories/in-memory/in-memory-categories-repository';
 import { describe, it, expect, beforeEach } from 'vitest';
 
+import { InMemoryCategoriesRepository } from '../../repositories/in-memory/in-memory-categories-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { FetchCategoriesUseCase } from './fetch-categories';
 

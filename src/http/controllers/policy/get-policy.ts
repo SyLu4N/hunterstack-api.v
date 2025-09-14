@@ -1,9 +1,10 @@
-import { PrismaPoliciesRepository } from '@/repositories/prisma/prisma-policies-repository';
-import { ResourceNotFoundError } from '@/use-cases/@errors/resource-not-found-error';
-import { GetBySlugPolicyUseCase } from '@/use-cases/policy/get-by-slug-policy';
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { BadRequestError } from 'openai';
 import { z } from 'zod';
+
+import { PrismaPoliciesRepository } from '../../../repositories/prisma/prisma-policies-repository';
+import { ResourceNotFoundError } from '../../../use-cases/@errors/resource-not-found-error';
+import { GetBySlugPolicyUseCase } from '../../../use-cases/policy/get-by-slug-policy';
 
 export async function getPolicy(req: FastifyRequest, res: FastifyReply) {
   const policyParamsSchema = z.object({

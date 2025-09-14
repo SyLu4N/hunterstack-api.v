@@ -1,7 +1,7 @@
-import { FetchPoliciesQuery } from '@/@types/fetch-policies-query';
-import { prisma } from '@/lib/prisma';
 import { Prisma } from '@prisma/client';
 
+import { FetchPoliciesQuery } from '../../@types/fetch-policies-query';
+import { prisma } from '../../lib/prisma';
 import { InterfacePolicyRepository } from '../@interface/interface-policy-repository';
 
 const include: Prisma.PolicyInclude = {

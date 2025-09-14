@@ -1,6 +1,5 @@
-import { ReturnLLM } from '@/@types/return-llm';
-import { createChat } from '@/lib/gemini-ai';
-
+import { ReturnLLM } from '../../@types/return-llm';
+import { createChat } from '../../lib/gemini-ai';
 import { BadRequestError } from '../@errors/bad-request-error';
 
 export interface AnalizePolicyUseCaseRequest {

@@ -1,9 +1,9 @@
-import { createBrowser, createPage } from '@/lib/puppeteer';
-import { InterfacePolicyRepository } from '@/repositories/@interface/interface-policy-repository';
-import { formatDate } from '@/utils/formatDate';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
+import { createBrowser, createPage } from '../../lib/puppeteer';
+import { InterfacePolicyRepository } from '../../repositories/@interface/interface-policy-repository';
+import { formatDate } from '../../utils/formatDate';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { ResourceNotFoundError } from '../@errors/resource-not-found-error';
 

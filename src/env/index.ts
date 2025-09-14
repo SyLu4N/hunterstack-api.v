@@ -5,7 +5,7 @@ const envShcema = z.object({
   NODE_ENV: z.enum(['dev', 'test', 'production']).default('dev'),
   PORT: z.coerce.number().default(3333),
 
-  SECRET_KEY_GEMINIAI: z.string(),
+  SECRET_KEY_GEMINIAI: z.string().optional(),
 });
 
 const _env = envShcema.safeParse(process.env);

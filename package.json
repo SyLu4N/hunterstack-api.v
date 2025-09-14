@@ -2,7 +2,6 @@
   "name": "sl-cosmeticos-back-end",
   "version": "1.0.0",
   "description": "SL Cosméticos",
-  "type": "module",
   "main": "index.js",
   "engines": {
     "node": "20.x"
@@ -11,12 +10,13 @@
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
     "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap",
+    "vercel-build": "prisma generate",
     "test": "vitest run --project unit",
     "test:watch": "vitest --project unit",
     "test:e2e": "vitest run --project e2e",
     "test:e2e:watch": "vitest --project e2e",
     "test:coverage": "vitest run --coverage",
-    "postinstall": "prisma generate && npx puppeteer browsers install chrome"
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",

@@ -1,9 +1,10 @@
-import { PrismaPoliciesRepository } from '@/repositories/prisma/prisma-policies-repository';
-import { ResourceNotFoundError } from '@/use-cases/@errors/resource-not-found-error';
-import { ExportPolicyPdfUseCase } from '@/use-cases/scrape/export-policy-pdf';
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { BadRequestError } from 'openai';
 import { z } from 'zod';
+
+import { PrismaPoliciesRepository } from '../../../repositories/prisma/prisma-policies-repository';
+import { ResourceNotFoundError } from '../../../use-cases/@errors/resource-not-found-error';
+import { ExportPolicyPdfUseCase } from '../../../use-cases/scrape/export-policy-pdf';
 
 export async function exportPolicyPdf(req: FastifyRequest, res: FastifyReply) {
   const ParamsSchema = z.object({

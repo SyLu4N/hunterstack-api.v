@@ -1,5 +1,4 @@
-import { InterfaceCategoryRepository } from '@/repositories/@interface/interface-category-repository';
-
+import { InterfaceCategoryRepository } from '../../repositories/@interface/interface-category-repository';
 import { ResourceNotFoundError } from '../@errors/resource-not-found-error';
 
 interface DeleteCategoryUseCaseRequest {

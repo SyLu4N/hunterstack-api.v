@@ -1,5 +1,6 @@
-import { InMemoryPoliciesRepository } from '@/repositories/in-memory/in-memory-policies-repository';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
+
+import { InMemoryPoliciesRepository } from '../../repositories/in-memory/in-memory-policies-repository';
 
 vi.mock('node:fs', () => ({
   readFileSync: vi.fn(
@@ -14,7 +15,7 @@ vi.mock('node:fs', () => ({
   ),
 }));
 
-vi.mock('@/lib/puppeteer', () => ({
+vi.mock('../../lib/puppeteer', () => ({
   createBrowser: vi.fn(async () => ({ close: vi.fn() })),
   createPage: vi.fn(async () => ({
     setContent: vi.fn(),

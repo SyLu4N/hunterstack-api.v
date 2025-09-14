@@ -1,6 +1,6 @@
-import { InterfacePolicyRepository } from '@/repositories/@interface/interface-policy-repository';
 import { Policy } from '@prisma/client';
 
+import { InterfacePolicyRepository } from '../../repositories/@interface/interface-policy-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { ResourceNotFoundError } from '../@errors/resource-not-found-error';
 

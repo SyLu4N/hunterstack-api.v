@@ -1,6 +1,6 @@
-import { InMemoryPoliciesRepository } from '@/repositories/in-memory/in-memory-policies-repository';
 import { expect, describe, it, beforeEach } from 'vitest';
 
+import { InMemoryPoliciesRepository } from '../../repositories/in-memory/in-memory-policies-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { FetchPoliciesUseCase } from './fetch-policies';
 

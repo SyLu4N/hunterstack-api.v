@@ -1,9 +1,10 @@
-import { PrismaCategoriesRepository } from '@/repositories/prisma/prisma-categories-repository';
-import { ResourceNotFoundError } from '@/use-cases/@errors/resource-not-found-error';
-import { GetBySlugCategoryUseCase } from '@/use-cases/category/get-by-slug-category';
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { BadRequestError } from 'openai';
 import { z } from 'zod';
+
+import { PrismaCategoriesRepository } from '../../../repositories/prisma/prisma-categories-repository';
+import { ResourceNotFoundError } from '../../../use-cases/@errors/resource-not-found-error';
+import { GetBySlugCategoryUseCase } from '../../../use-cases/category/get-by-slug-category';
 
 export async function getCategory(req: FastifyRequest, res: FastifyReply) {
   const categoryParamsSchema = z.object({

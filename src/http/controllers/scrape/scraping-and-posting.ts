@@ -1,13 +1,14 @@
-import { PrismaCategoriesRepository } from '@/repositories/prisma/prisma-categories-repository';
-import { PrismaPoliciesRepository } from '@/repositories/prisma/prisma-policies-repository';
-import { AnalizePolicyUseCase } from '@/use-cases/llm/analyzePolicy';
-import { CreatePolicyUseCase } from '@/use-cases/policy/create-policy';
-import { GetBySlugPolicyUseCase } from '@/use-cases/policy/get-by-slug-policy';
-import { ScrapePolicyUseCase } from '@/use-cases/scrape/scrape-policy';
-import { SacrapingAndPostingUseCase } from '@/use-cases/scrape/scraping-and-posting';
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { BadRequestError } from 'openai';
 import { z } from 'zod';
+
+import { PrismaCategoriesRepository } from '../../../repositories/prisma/prisma-categories-repository';
+import { PrismaPoliciesRepository } from '../../../repositories/prisma/prisma-policies-repository';
+import { AnalizePolicyUseCase } from '../../../use-cases/llm/analyzePolicy';
+import { CreatePolicyUseCase } from '../../../use-cases/policy/create-policy';
+import { GetBySlugPolicyUseCase } from '../../../use-cases/policy/get-by-slug-policy';
+import { ScrapePolicyUseCase } from '../../../use-cases/scrape/scrape-policy';
+import { SacrapingAndPostingUseCase } from '../../../use-cases/scrape/scraping-and-posting';
 
 export async function scrapingAndPosting(
   req: FastifyRequest,

@@ -1,6 +1,7 @@
- import { app } from '@/app';
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+
+import { app } from '../../../../api/index';
 
 describe('Scraping And Posting (e2e)', () => {
   beforeAll(async () => {

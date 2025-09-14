@@ -1,7 +1,7 @@
-import { InMemoryCategoriesRepository } from '@/repositories/in-memory/in-memory-categories-repository';
-import { ResourceNotFoundError } from '@/use-cases/@errors/resource-not-found-error';
 import { beforeEach, describe, expect, it } from 'vitest';
 
+import { InMemoryCategoriesRepository } from '../../repositories/in-memory/in-memory-categories-repository';
+import { ResourceNotFoundError } from '../../use-cases/@errors/resource-not-found-error';
 import { DeleteCategoryUseCase } from './delete-category';
 
 let categoriesRepository: InMemoryCategoriesRepository;

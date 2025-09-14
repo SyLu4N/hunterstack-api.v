@@ -1,5 +1,6 @@
-import { env } from '@/env';
 import { GoogleGenAI } from '@google/genai';
+
+import { env } from '../env';
 
 const ai = new GoogleGenAI({
   apiKey: env.SECRET_KEY_GEMINIAI,

@@ -1,6 +1,6 @@
-import { generateSlug } from '@/utils/generate-slug';
 import { Policy } from '@prisma/client';
 
+import { generateSlug } from '../../utils/generate-slug';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { AnalizePolicyUseCase } from '../llm/analyzePolicy';
 import { CreatePolicyUseCase } from '../policy/create-policy';

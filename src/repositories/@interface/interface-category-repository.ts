@@ -1,6 +1,7 @@
-import { CategoryWithAdditionalInfo } from '@/@types/@category-with-additional-info';
-import { FetchCategoriesQuery } from '@/@types/fetch-categories-query';
 import { Prisma } from '@prisma/client';
+
+import { CategoryWithAdditionalInfo } from '../../@types/@category-with-additional-info';
+import { FetchCategoriesQuery } from '../../@types/fetch-categories-query';
 
 export interface InterfaceCategoryRepository {
   create(data: Prisma.CategoryCreateInput): Promise<CategoryWithAdditionalInfo>;

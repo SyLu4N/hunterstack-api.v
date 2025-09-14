@@ -1,6 +1,6 @@
-import { InMemoryPoliciesRepository } from '@/repositories/in-memory/in-memory-policies-repository';
 import { expect, describe, it, beforeEach } from 'vitest';
 
+import { InMemoryPoliciesRepository } from '../../repositories/in-memory/in-memory-policies-repository';
 import { ResourceNotFoundError } from '../@errors/resource-not-found-error';
 import { DeletePolicyUseCase } from './delete-policy';
 
@@ -18,6 +18,7 @@ describe('DeletePolicyUseCase', () => {
       title: 'Política Teste',
       description: 'Descrição da política',
       source: 'Empresa Exemplo',
+      summary: 'Descrição resumida da policym de backup',
       category: { connect: { id: 1 } },
       slug: 'politica-teste',
       createdAt: new Date(),

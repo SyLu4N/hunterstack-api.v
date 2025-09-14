@@ -1,11 +1,17 @@
-import { app } from './app';
-import { env } from './env';
+import { app } from '../api/index';
 
-app
-  .listen({
-    host: '0.0.0.0',
-    port: env.PORT,
-  })
-  .then(() => {
-    console.log('🚀 HTTP Server Running!');
-  });
+const start = async () => {
+  try {
+    const port = process.env.PORT || 3333;
+    const host = process.env.HOST || '0.0.0.0';
+
+    await app.listen({ port: Number(port), host });
+
+    console.log(`🚀 Server running on http://${host}:${port}`);
+  } catch (err) {
+    app.log.error(err);
+    process.exit(1);
+  }
+};
+
+start();

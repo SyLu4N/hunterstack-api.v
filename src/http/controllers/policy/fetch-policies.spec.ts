@@ -1,7 +1,8 @@
-import { app } from '@/app';
-import { createPolicyPrismaTest } from '@/utils/test/createPolicyPrisma';
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+
+import { app } from '../../../../api/index';
+import { createPolicyPrismaTest } from '../../../utils/test/createPolicyPrisma';
 
 describe('Fetch Policies (e2e)', () => {
   beforeAll(async () => {

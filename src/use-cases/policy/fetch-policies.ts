@@ -1,7 +1,6 @@
-import { PolicyWithAdditionalInfo } from '@/@types/@policy-with-additional-info';
-import { FetchPoliciesQuery } from '@/@types/fetch-policies-query';
-import { InterfacePolicyRepository } from '@/repositories/@interface/interface-policy-repository';
-
+import { PolicyWithAdditionalInfo } from '../../@types/@policy-with-additional-info';
+import { FetchPoliciesQuery } from '../../@types/fetch-policies-query';
+import { InterfacePolicyRepository } from '../../repositories/@interface/interface-policy-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 
 interface FetchPoliciesUseCaseRequest {

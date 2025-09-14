@@ -1,7 +1,8 @@
-import { InterfaceCategoryRepository } from '@/repositories/@interface/interface-category-repository';
-import { InterfacePolicyRepository } from '@/repositories/@interface/interface-policy-repository';
-import { generateSlug } from '@/utils/generate-slug';
 import { Policy, Prisma } from '@prisma/client';
+
+import { InterfaceCategoryRepository } from '../../repositories/@interface/interface-category-repository';
+import { InterfacePolicyRepository } from '../../repositories/@interface/interface-policy-repository';
+import { generateSlug } from '../../utils/generate-slug';
 
 type PolicyWithCategory = Omit<Prisma.PolicyCreateInput, 'category'> & {
   category: string;

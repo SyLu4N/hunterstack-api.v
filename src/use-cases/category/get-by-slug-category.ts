@@ -1,6 +1,5 @@
-import { CategoryWithAdditionalInfo } from '@/@types/@category-with-additional-info';
-import { InterfaceCategoryRepository } from '@/repositories/@interface/interface-category-repository';
-
+import { CategoryWithAdditionalInfo } from '../../@types/@category-with-additional-info';
+import { InterfaceCategoryRepository } from '../../repositories/@interface/interface-category-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { ResourceNotFoundError } from '../@errors/resource-not-found-error';
 

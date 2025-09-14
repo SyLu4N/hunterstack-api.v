@@ -1,5 +1,4 @@
-import { createBrowser, createPage } from '@/lib/puppeteer';
-
+import { createBrowser, createPage } from '../../lib/puppeteer';
 import { BadRequestError } from '../@errors/bad-request-error';
 
 interface ScrapePolicyUseCaseRequest {

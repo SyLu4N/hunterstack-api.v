@@ -1,5 +1,4 @@
-import { InterfacePolicyRepository } from '@/repositories/@interface/interface-policy-repository';
-
+import { InterfacePolicyRepository } from '../../repositories/@interface/interface-policy-repository';
 import { ResourceNotFoundError } from '../@errors/resource-not-found-error';
 
 interface DeletePolicyUseCaseRequest {
