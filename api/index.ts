@@ -1,6 +1,7 @@
 import fastifyCookie from '@fastify/cookie';
 import fastifyCors from '@fastify/cors';
 import fastifyFormBody from '@fastify/formbody';
+import fastifyJwt from '@fastify/jwt';
 import fastifyMultipart from '@fastify/multipart';
 import fastifyRateLimit from '@fastify/rate-limit';
 import fastifySwagger from '@fastify/swagger';
@@ -14,13 +15,27 @@ import {
 
 import { env } from '../src/env/index';
 import { categoriesRoutes } from '../src/http/controllers/category/routes';
+import { favoritesRoutes } from '../src/http/controllers/favorite/routes';
 import { policiesRoutes } from '../src/http/controllers/policy/routes';
 import { scrapingRoutes } from '../src/http/controllers/scrape/routes';
+import { usersRoutes } from '../src/http/controllers/user/routes';
 
 export const app = fastify();
 
 app.register(fastifyCors, {
   origin: '*',
+  methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
+});
+
+app.register(fastifyJwt, {
+  secret: env.JWT_SECRET,
+  sign: { expiresIn: '7d' },
+});
+
+app.setNotFoundHandler((_req, res) => {
+  return res
+    .status(404)
+    .send({ message: 'Algo deu errado, rota não encontrada.' });
 });
 
 /* app.register(
@@ -85,6 +100,8 @@ app.register(fastifyRateLimit, {
 app.register(scrapingRoutes);
 app.register(policiesRoutes);
 app.register(categoriesRoutes);
+app.register(usersRoutes);
+app.register(favoritesRoutes);
 
 app.setErrorHandler((error, _req, res) => {
   if (error.validation) {

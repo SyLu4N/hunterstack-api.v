@@ -20,6 +20,8 @@ model Policy {
   category   Category @relation(fields: [categoryId], references: [id])
   categoryId Int
 
+  favorites Favorite[]
+
   @@map("policies")
 }
 
@@ -32,4 +34,29 @@ model Category {
   policies Policy[]
 
   @@map("categories")
+}
+
+model User {
+  id        String   @id @unique
+  email     String   @unique
+  name      String
+  avatar    String?
+  createdAt DateTime @default(now())
+
+  favorites Favorite[]
+
+  @@map("users")
+}
+
+model Favorite {
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  policyId Int
+  policy   Policy @relation(fields: [policyId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@id([userId, policyId])
+  @@map("favorites")
 }

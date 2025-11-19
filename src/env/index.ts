@@ -9,6 +9,17 @@ const envShcema = z.object({
     invalid_type_error: 'Chave Secreta do GeminiAI inválida.',
   }),
 
+  GITHUB_CLIENT_ID: z.string({
+    invalid_type_error: 'Chave do GitHub Auth inválida.',
+  }),
+  GITHUB_CLIENT_SECRET: z.string({
+    invalid_type_error: 'Chave Secreta do GitHub Auth inválida.',
+  }),
+
+  JWT_SECRET: z.string({
+    invalid_type_error: 'Chave Secreta do JWT inválida.',
+  }),
+
   PATH_CHROME: z.string({ invalid_type_error: 'Caminho do Chrome inválido.' }),
 
   DATABASE_URL: z.string({

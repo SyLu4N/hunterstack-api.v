@@ -1,12 +1,12 @@
 import chromium from '@sparticuz/chromium';
-import puppeteer from 'puppeteer-core';
+import puppeteer, { Browser } from 'puppeteer-core';
 import { env } from 'src/env';
 
 export async function createBrowser() {
-  let executablePath = await chromium.executablePath();
+  let executablePath = env.PATH_CHROME + '/chrome.exe';
 
-  if (env.NODE_ENV === 'test') {
-    executablePath = env.PATH_CHROME + '/chrome.exe';
+  if (env.NODE_ENV === 'production') {
+    executablePath = await chromium.executablePath();
   }
 
   const browser = await puppeteer.launch({
@@ -18,7 +18,7 @@ export async function createBrowser() {
   return browser;
 }
 
-export async function createPage(browser: any) {
+export async function createPage(browser: Browser) {
   const page = await browser.newPage();
   return page;
 }

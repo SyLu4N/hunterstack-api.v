@@ -27,6 +27,7 @@ export async function policiesRoutes(app: FastifyInstance) {
       response: {
         200: z
           .object({
+            id: z.number(),
             slug: z.string(),
             title: z.string(),
             description: z.string(),

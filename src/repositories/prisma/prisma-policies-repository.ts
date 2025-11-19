@@ -18,7 +18,8 @@ export class PrismaPoliciesRepository implements InterfacePolicyRepository {
   async findById(policyId: number) {
     const policy = await prisma.policy.findUnique({
       where: { id: policyId },
-      include,
+
+      include: { category: true },
     });
 
     return policy;
