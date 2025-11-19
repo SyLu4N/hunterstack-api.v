@@ -1,6 +1,6 @@
 import { Prisma, User } from '@prisma/client';
-import { FetchUsersQuery } from 'src/@types/fetch-users-query';
 
+import { FetchUsersQuery } from '../../@types/fetch-users-query';
 import { InterfaceUserRepository } from '../@interface/interface-user-repository';
 
 export class InMemoryUsersRepository implements InterfaceUserRepository {

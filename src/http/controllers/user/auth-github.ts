@@ -1,8 +1,9 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { BadRequestError } from 'openai';
-import { PrismaUsersRepository } from 'src/repositories/prisma/prisma-users-repository';
-import { AuthGithubUseCase } from 'src/use-cases/user/auth-github';
 import { z } from 'zod';
+
+import { PrismaUsersRepository } from '../../../repositories/prisma/prisma-users-repository';
+import { AuthGithubUseCase } from '../../../use-cases/user/auth-github';
 
 export async function authGithub(req: FastifyRequest, res: FastifyReply) {
   const ParamsSchema = z.object({

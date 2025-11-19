@@ -1,10 +1,10 @@
-import { createFavoritePrismaTest } from 'src/utils/test/createFavoritePrisma';
-import { createUserPrismaTest } from 'src/utils/test/createUserPrisma';
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import { app } from '../../../../api/index';
+import { createFavoritePrismaTest } from '../../../utils/test/createFavoritePrisma';
 import { createPolicyPrismaTest } from '../../../utils/test/createPolicyPrisma';
+import { createUserPrismaTest } from '../../../utils/test/createUserPrisma';
 
 describe('Delete Favorite (e2e)', () => {
   beforeAll(async () => {

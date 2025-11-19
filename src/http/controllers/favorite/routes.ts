@@ -1,7 +1,7 @@
 import { FastifyInstance } from 'fastify';
-import { verifyJWT } from 'src/http/middlewares/verify-jwt';
 import { z } from 'zod';
 
+import { verifyJWT } from '../../../http/middlewares/verify-jwt';
 import { createFavorite } from './create-favorite';
 import { deleteFavorite } from './delete-favorite';
 import { fetchFavorites } from './fetch-favorites';

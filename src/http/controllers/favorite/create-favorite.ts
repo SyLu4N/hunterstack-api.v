@@ -1,12 +1,12 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { PrismaPoliciesRepository } from 'src/repositories/prisma/prisma-policies-repository';
-import { PrismaUsersRepository } from 'src/repositories/prisma/prisma-users-repository';
-import { ResourceAlreadyExistsError } from 'src/use-cases/@errors/resource-already-exists-error';
-import { CreateFavoriteUseCase } from 'src/use-cases/favorite/create-favorite';
 import { z } from 'zod';
 
 import { PrismaFavoritesRepository } from '../../../repositories/prisma/prisma-favorites-repository';
+import { PrismaPoliciesRepository } from '../../../repositories/prisma/prisma-policies-repository';
+import { PrismaUsersRepository } from '../../../repositories/prisma/prisma-users-repository';
+import { ResourceAlreadyExistsError } from '../../../use-cases/@errors/resource-already-exists-error';
 import { ResourceNotFoundError } from '../../../use-cases/@errors/resource-not-found-error';
+import { CreateFavoriteUseCase } from '../../../use-cases/favorite/create-favorite';
 
 export async function createFavorite(req: FastifyRequest, res: FastifyReply) {
   const favoriteBodySchema = z.object({

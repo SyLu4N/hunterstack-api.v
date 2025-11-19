@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client';
-import { FetchUsersQuery } from 'src/@types/fetch-users-query';
 
+import { FetchUsersQuery } from '../../@types/fetch-users-query';
 import { prisma } from '../../lib/prisma';
 import { InterfaceUserRepository } from '../@interface/interface-user-repository';
 

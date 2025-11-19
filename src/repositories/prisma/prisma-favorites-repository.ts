@@ -1,6 +1,6 @@
 import { Prisma } from '@prisma/client';
-import { FetchFavoritesQuery } from 'src/@types/fetch-favorites-query';
 
+import { FetchFavoritesQuery } from '../../@types/fetch-favorites-query';
 import { prisma } from '../../lib/prisma';
 import { InterfaceFavoriteRepository } from '../@interface/interface-favorite-repository';
 

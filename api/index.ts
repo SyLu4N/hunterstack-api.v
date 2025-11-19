@@ -24,7 +24,7 @@ export const app = fastify();
 
 app.register(fastifyCors, {
   origin: '*',
-  methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
+  methods: ['GET', 'POST', 'DELETE', 'OPTIONS', 'PATCH'],
 });
 
 app.register(fastifyJwt, {

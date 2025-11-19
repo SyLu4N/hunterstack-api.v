@@ -1,10 +1,10 @@
 import jwt from 'jsonwebtoken';
-import { createUserPrismaTest } from 'src/utils/test/createUserPrisma';
 import request from 'supertest';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import { app } from '../../../../api/index';
 import { env } from '../../../env';
+import { createUserPrismaTest } from '../../../utils/test/createUserPrisma';
 
 describe('Me (e2e)', () => {
   beforeAll(async () => {

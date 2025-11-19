@@ -1,6 +1,6 @@
-import { InMemoryUsersRepository } from 'src/repositories/in-memory/in-memory-users-repository';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { InMemoryUsersRepository } from '../../repositories/in-memory/in-memory-users-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { AuthGithubUseCase } from './auth-github';
 

@@ -1,6 +1,7 @@
 import chromium from '@sparticuz/chromium';
 import puppeteer, { Browser } from 'puppeteer-core';
-import { env } from 'src/env';
+
+import { env } from '../env';
 
 export async function createBrowser() {
   let executablePath = env.PATH_CHROME + '/chrome.exe';

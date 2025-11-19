@@ -1,10 +1,10 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { PrismaUsersRepository } from 'src/repositories/prisma/prisma-users-repository';
-import { FetchFavoritesUseCase } from 'src/use-cases/favorite/fetch-favorites';
 import { z } from 'zod';
 
 import { PrismaFavoritesRepository } from '../../../repositories/prisma/prisma-favorites-repository';
+import { PrismaUsersRepository } from '../../../repositories/prisma/prisma-users-repository';
 import { ResourceNotFoundError } from '../../../use-cases/@errors/resource-not-found-error';
+import { FetchFavoritesUseCase } from '../../../use-cases/favorite/fetch-favorites';
 
 export async function fetchFavorites(req: FastifyRequest, res: FastifyReply) {
   const favoriteQuerysSchema = z.object({

@@ -1,6 +1,6 @@
 import { Favorite, Prisma } from '@prisma/client';
-import { FetchFavoritesQuery } from 'src/@types/fetch-favorites-query';
 
+import { FetchFavoritesQuery } from '../../@types/fetch-favorites-query';
 import { InterfaceFavoriteRepository } from '../@interface/interface-favorite-repository';
 
 export class InMemoryFavoritesRepository

@@ -1,5 +1,6 @@
 import { Favorite, Prisma } from '@prisma/client';
-import { FetchFavoritesQuery } from 'src/@types/fetch-favorites-query';
+
+import { FetchFavoritesQuery } from '../../@types/fetch-favorites-query';
 
 export interface InterfaceFavoriteRepository {
   create(data: Prisma.FavoriteUncheckedCreateInput): Promise<Favorite>;

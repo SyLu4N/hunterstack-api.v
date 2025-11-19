@@ -1,6 +1,5 @@
-import { env } from 'src/env';
-import { InterfaceUserRepository } from 'src/repositories/@interface/interface-user-repository';
-
+import { env } from '../../env';
+import { InterfaceUserRepository } from '../../repositories/@interface/interface-user-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 
 interface AuthGithubUseCaseRequest {

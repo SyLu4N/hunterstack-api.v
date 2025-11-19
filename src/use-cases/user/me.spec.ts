@@ -1,8 +1,8 @@
 import jwt from 'jsonwebtoken';
-import { InMemoryUsersRepository } from 'src/repositories/in-memory/in-memory-users-repository';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { env } from '../../env';
+import { InMemoryUsersRepository } from '../../repositories/in-memory/in-memory-users-repository';
 import { BadRequestError } from '../@errors/bad-request-error';
 import { ResourceNotFoundError } from '../@errors/resource-not-found-error';
 import { MeUseCase } from './me';
