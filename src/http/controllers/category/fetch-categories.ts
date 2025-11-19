@@ -7,7 +7,7 @@ import { FetchCategoriesUseCase } from '../../../use-cases/category/fetch-catego
 
 export async function fetchCategories(req: FastifyRequest, res: FastifyReply) {
   const fetchQuerysSchema = z.object({
-    page: z.coerce.number().optional().default(1),
+    page: z.coerce.number().default(1),
 
     name: z
       .string({ invalid_type_error: 'Nome da categoria inválido.' })

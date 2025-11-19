@@ -7,7 +7,7 @@ import { FetchPoliciesUseCase } from '../../../use-cases/policy/fetch-policies';
 
 export async function fetchPolicies(req: FastifyRequest, res: FastifyReply) {
   const fetchQuerysSchema = z.object({
-    page: z.coerce.number().optional().default(1),
+    page: z.coerce.number().default(1),
     title: z.string({ invalid_type_error: 'Título inválido.' }).optional(),
 
     search: z
