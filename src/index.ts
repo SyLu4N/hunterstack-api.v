@@ -1,4 +1,5 @@
 import { app } from '../api/index';
+import { env } from './env';
 
 const start = async () => {
   try {
@@ -7,7 +8,12 @@ const start = async () => {
 
     await app.listen({ port: Number(port), host });
 
-    console.log(`🚀 Server running on http://${host}:${port}`);
+    if (env.NODE_ENV !== 'production') {
+      // eslint-disable-next-line no-console
+      console.log(`🚀 Server running on http://${host}:${port}`);
+    } else {
+      app.log.info(`🚀 Server ready at http://${host}:${port}`);
+    }
   } catch (err) {
     app.log.error(err);
     process.exit(1);
